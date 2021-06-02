@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <title>Frontend Mentor | Article preview component</title>
+
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <div class="card-img"></div>
+    <div class="card-body">
+      <p class="head">Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home</p>
+        <p class="paragraph">Ever been in a room and felt like something was missing? Perhaps 
+          it felt slightly bare and uninviting. I’ve got some simple tips 
+          to help you make any room feel complete.</p>
+          <footer>
+            <img src="images/avatar-michelle.jpg" alt="avatar">
+            <div class="profile">
+              <p class="name">Michelle Appleton</p>
+              <p class="date">28 Jun 2020</p>
+            </div>
+            <div class="arrow" onclick="show(); toggleClass();">
+              <img src="images/icon-share.svg" alt="share">
+            </div>
+          </footer>
+    </div>
+    <div class="layout-share">
+      <p>SHARE</p>
+      <div class="media">
+        <img src="images/icon-facebook.svg" alt="facebook">
+      <img src="images/icon-twitter.svg" alt="twitter">
+      <img src="images/icon-pinterest.svg" alt="pinterest">
+      </div>
+      <div class="arrow" onclick="hide();">
+        <img src="images/icon-share.svg" alt="share">
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mohamed Hesham</a>.
+  </div>
+  <script>
+    let layout = document.querySelector(".layout-share"),
+        arrowDiv = document.querySelector("footer .arrow"),
+        arrowImg = document.querySelector("footer .arrow img"),
+        // toggle style in small screen 375px
+        hide = () => window.innerWidth >= 320 ? layout.style.bottom = "-65px" : "",
+        show = () => window.innerWidth >= 320 ? layout.style.bottom = "0" : "",
+        // another way to toggle style in large screen 1440px
+        toggleClass = () =>  {
+          if (window.innerWidth >= 1024) {
+              layout.classList.toggle("isVisible");
+              arrowDiv.classList.toggle("isBckColored");
+              arrowImg.classList.toggle("isColored");
+              };
+            }
+  </script>
+</body>
+</html>
