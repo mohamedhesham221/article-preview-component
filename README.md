@@ -11,8 +11,8 @@
 
 ### Links
 
-- Solution URL: [frontend mentor](https://your-solution-url.com)
-- Live Site URL: [Live Preview](https://your-live-site-url.com)
+- Solution URL: [frontend mentor](https://www.frontendmentor.io/solutions/html-and-css-and-javascript-86RdBryDw)
+- Live Site URL: [Live Preview](https://article-preview-component2021.netlify.app/)
 
 
 ### Built with
